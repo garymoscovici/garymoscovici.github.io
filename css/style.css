@@ -27,6 +27,10 @@ body {
   font-family: "Nunito", "Segoe UI", Arial, sans-serif;
   color: var(--ink);
   background: var(--paper);
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   padding-top: calc(var(--nav-h) + 24px);
   min-height: 100vh;
   position: relative;
@@ -83,6 +87,7 @@ img {
 main {
   display: block;
 }
+
 h1, h2, h3 {
   font-family: "Nunito", "Segoe UI", Arial, sans-serif;
   font-weight: 600;
@@ -128,7 +133,6 @@ p {
   display: none;
   border: 2px solid var(--ink);
   background: var(--paper);
-  padding-top: calc(var(--nav-h) + 24px);
   padding: 6px 10px;
   border-radius: 6px;
   font-family: inherit;
@@ -169,7 +173,6 @@ p {
   top: 100%;
   left: 0;
   background: var(--paper);
-  padding-top: calc(var(--nav-h) + 24px);
   border: 2px solid var(--ink);
   border-radius: 8px;
   padding: 8px;
@@ -264,11 +267,17 @@ p {
   padding: 6px 0 0;
 }
 
-.video-thumbs {\r\n  display: flex;\r\n  gap: 12px;\r\n  overflow-x: auto;\r\n  padding: 6px 2px;\r\n  scroll-snap-type: x mandatory;\r\n  -webkit-overflow-scrolling: touch;
-  display: grid;
-  }
+.video-thumbs {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 6px 2px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
 
 .video-thumb {
+  flex: 0 0 180px;
   border: 2px solid var(--ink);
   border-radius: 8px;
   overflow: hidden;
@@ -276,6 +285,7 @@ p {
   background: #fff;
   cursor: pointer;
   box-shadow: 2px 2px 0 var(--shadow);
+  scroll-snap-align: start;
 }
 
 .video-thumb.active {
@@ -404,12 +414,7 @@ footer {
     position: absolute;
     top: var(--nav-h);
     right: 16px;
-    background: var(--paper);
-  background: #ffffff;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  padding-top: calc(var(--nav-h) + 24px);
+    background: #ffffff;
     border: 2px solid var(--ink);
     border-radius: 10px;
     flex-direction: column;
@@ -425,19 +430,14 @@ footer {
 }
 
 @media (max-width: 540px) {
-  .video-thumbs {\r\n  display: flex;\r\n  gap: 12px;\r\n  overflow-x: auto;\r\n  padding: 6px 2px;\r\n  scroll-snap-type: x mandatory;\r\n  -webkit-overflow-scrolling: touch;
-    grid-template-columns: 1fr 1fr;
+  .video-thumb {
+    flex: 0 0 150px;
   }
 
   .thumbnail-strip button {
     width: 120px;
   }
 }
-
-
-
-
-
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }
@@ -468,7 +468,6 @@ main .sketch-frame {
   box-shadow: 6px 6px 0 var(--shadow);
 }
 
-
 .no-videos {
   padding: 14px;
   border: 2px dashed var(--ink);
@@ -477,7 +476,3 @@ main .sketch-frame {
   color: var(--muted);
   font-size: 16px;
 }
-
-
-
-
