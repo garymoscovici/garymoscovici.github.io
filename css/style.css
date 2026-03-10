@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
 
 :root {
   --paper: #f4ead3;
@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-  font-family: "Patrick Hand", "Segoe Print", "Comic Sans MS", cursive;
+  font-family: "Nunito", "Segoe UI", Arial, sans-serif;
   color: var(--ink);
   background: var(--paper);
   background-image: url("https://9f210d7eb8da4c.s3.us-west-2.amazonaws.com/_images/saul_img/BACKGROUND.jpg");
@@ -88,8 +88,8 @@ main {
   display: block;
 }
 h1, h2, h3 {
-  font-family: "Rock Salt", "Patrick Hand", cursive;
-  font-weight: 400;
+  font-family: "Nunito", "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
   margin: 0 0 12px;
 }
 
@@ -123,7 +123,7 @@ p {
 }
 
 .brand {
-  font-family: "Rock Salt", cursive;
+  font-family: "Nunito", "Segoe UI", Arial, sans-serif;
   font-size: 18px;
   letter-spacing: 1px;
 }
@@ -276,11 +276,9 @@ p {
   padding: 6px 0 0;
 }
 
-.video-thumbs {
+.video-thumbs {\r\n  display: flex;\r\n  gap: 12px;\r\n  overflow-x: auto;\r\n  padding: 6px 2px;\r\n  scroll-snap-type: x mandatory;\r\n  -webkit-overflow-scrolling: touch;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-}
+  }
 
 .video-thumb {
   border: 2px solid var(--ink);
@@ -439,7 +437,7 @@ footer {
 }
 
 @media (max-width: 540px) {
-  .video-thumbs {
+  .video-thumbs {\r\n  display: flex;\r\n  gap: 12px;\r\n  overflow-x: auto;\r\n  padding: 6px 2px;\r\n  scroll-snap-type: x mandatory;\r\n  -webkit-overflow-scrolling: touch;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -491,4 +489,5 @@ main .sketch-frame {
   color: var(--muted);
   font-size: 16px;
 }
+
 
