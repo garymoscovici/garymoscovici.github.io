@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Saul Sketchbook</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">SAUL CRINIER</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <div class="nav-item"><a href="animation.html">Animation</a></div>
+        <div class="nav-item dropdown">
+          <button aria-haspopup="true" aria-expanded="false">Illustrations</button>
+          <div class="dropdown-menu" role="menu">
+            <a href="figure-drawing.html" role="menuitem">Figure Drawing</a>
+            <a href="landscapes.html" role="menuitem">Landscapes</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="about.html">About Me</a></div>
+        <div class="nav-item"><a href="contact.html">Contact</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <div class="section-title">
+        <h1>Contact</h1>
+        <div class="line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="sketch-card">
+          <h2>Say Hello</h2>
+          <p>Email: <a href="mailto:hello@saulsketch.com">hello@saulsketch.com</a></p>
+          <p>Available for animation, illustration, and storyboarding collaborations.</p>
+        </div>
+        <div class="sketch-card">
+          <h2>Send a Note</h2>
+          <form>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="your@email.com" />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project"></textarea>
+
+            <button type="submit">Send (static)</button>
+          </form>
+          <p style="margin-top: 10px; font-size: 14px;">This form is static. Use the email above or connect a form service if needed.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
